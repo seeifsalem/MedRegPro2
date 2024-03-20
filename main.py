@@ -31,7 +31,8 @@ st.header("MedRegPro checker")
 st.markdown("Requirement: Provide a general description of the device, including its intended purpose, intended users (e.g., healthcare professionals, patients), and the medical conditions, diseases, or medical states it's meant to diagnose, treat, monitor, prevent, or alleviate. It should also cover the device's mode of action and the principle of operation")
 
 def get_api_key():
-    return "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"
+    input_text = st.text_input(label="OpenAI API Key ",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input")
+    return input_text
 
 openai_api_key = get_api_key()
 
