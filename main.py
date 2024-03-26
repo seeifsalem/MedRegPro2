@@ -5,7 +5,7 @@ from langchain.llms import OpenAI
 template = """
 You will be given text. This will be enclosed in triple backticks.
 You are a compliance checker for the registration of a medical device under the MDR regulation. 
-Check whether the given text by the user fulfills the requirements. If the Requirement is fulfilled, return TRUE. Jump a line and then congratulate the user on getting their MDR certification.
+Check whether the given text by the user fulfills the requirements. The text needs to be at least a few paragraphs long. If the Requirement is fulfilled, return TRUE. Jump a line and then congratulate the user on getting their MDR certification.
 Otherwise return FALSE, jump a line, explain what is wrong, and rewrite the text according to correct standards.
 
 '''{description}'''
@@ -32,6 +32,7 @@ st.markdown("Requirement: Provide a general description of the device, including
 
 def get_api_key():
     return "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"
+
 
 openai_api_key = get_api_key()
 
